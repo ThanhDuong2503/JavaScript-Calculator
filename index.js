@@ -31,19 +31,26 @@ function div(firstNumber, secondNumber){
     return firstNumber / secondNumber;
 }
 
-if(operator == "+") {
-    let result = add(firstNumber , secondNumber);
-    alert("the result is " + result);
-} else if (operator == "-") {
-    let result = sub(firstNumber , secondNumber);
-    alert("the result is " + result);
-} else if (operator == "*") {
-    let result = multiply(firstNumber , secondNumber);
-    alert("the result is " + result);
-} else if (operator == "/") {
-    let result = div(firstNumber , secondNumber);
-    alert("the result is " + result);
-} else {
-    alert("invalid input");
+
+function calculate(firstNumber, secondNumber, operator) {
+    let result;
+    if (operator == "+") {
+        result = add(firstNumber, secondNumber);
+
+    } else if (operator == "-") {
+        result = sub(firstNumber, secondNumber);
+
+    } else if (operator == "*") {
+        result = multiply(firstNumber, secondNumber);
+
+    } else if (operator == "/") {
+        result = div(firstNumber, secondNumber);
+
+    } else {
+        alert("invalid input");
+    }
+    return result;
 }
+
+alert("the result is " + calculate(firstNumber,secondNumber, operator));
 
