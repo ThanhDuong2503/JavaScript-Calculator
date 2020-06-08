@@ -1,6 +1,6 @@
-let firstNumber = Number(prompt("please enter your first number", "5"));
-let secondNumber = Number(prompt("please enter your second number", "10"));
-let operator = prompt("please select an operation", ["+ ,- ,* , /"]);
+const firstNumber = Number(prompt("please enter your first number", "5"));
+const secondNumber = Number(prompt("please enter your second number", "10"));
+const operator = prompt("please select an operation", ["+ ,- ,* , /"]);
 
 // let result;
 
@@ -50,5 +50,7 @@ function calculate(firstNumber, secondNumber, operator) {
     }
 }
 
-alert("the result is " + calculate(firstNumber,secondNumber, operator));
+// alert("the result is " + calculate(firstNumber,secondNumber, operator));
+// andere Schreibweise:
+alert(`the result is ${calculate(firstNumber,secondNumber,operator)}`);
 
