@@ -31,25 +31,23 @@ function div(firstNumber, secondNumber){
     return firstNumber / secondNumber;
 }
 
-
 function calculate(firstNumber, secondNumber, operator) {
-    let result;
+
     if (operator == "+") {
-        result = add(firstNumber, secondNumber);
+        return add(firstNumber, secondNumber);
 
     } else if (operator == "-") {
-        result = sub(firstNumber, secondNumber);
+        return sub(firstNumber, secondNumber);
 
     } else if (operator == "*") {
-        result = multiply(firstNumber, secondNumber);
+        return multiply(firstNumber, secondNumber);
 
     } else if (operator == "/") {
-        result = div(firstNumber, secondNumber);
+        return div(firstNumber, secondNumber);
 
     } else {
         alert("invalid input");
     }
-    return result;
 }
 
 alert("the result is " + calculate(firstNumber,secondNumber, operator));
