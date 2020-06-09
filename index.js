@@ -1,20 +1,30 @@
 import {add , sub, multiply, div} from "./calculation.js";
 
-const firstNumber = Number(prompt("please enter your first number"));
-const secondNumber = Number(prompt("please enter your second number"));
-const operator = prompt("please select an operation", ["+ ,- ,* , /"]);
+const buttonPlus = document.getElementById("Plus")
+buttonPlus.addEventListener("click",()=> add());
 
-function calculate(firstNumber, secondNumber, operator){
-    switch (operator) {
-        case "+": return add(firstNumber, secondNumber);
-        case "-": return sub(firstNumber, secondNumber);
-        case "*": return multiply(firstNumber, secondNumber);
-        case "/": return div(firstNumber, secondNumber);
-        default: throw new Error("wrong input");
-    }
-}
+const buttonMinus = document.getElementById("Minus")
+buttonMinus.addEventListener("click",()=> sub());
 
-alert(`The result is: ${calculate(firstNumber,secondNumber,operator)}`);
+const buttonMulti = document.getElementById("Multi")
+buttonMulti.addEventListener("click",()=> multiply());
+
+const buttonDiv = document.getElementById("Div")
+buttonDiv.addEventListener("click",()=> div());
+
+// const operator = prompt("please select an operation", ["+ ,- ,* , /"]);
+
+// function calculate(firstNumber, secondNumber, operator){
+//     switch (operator) {
+//         case "+": return add(firstNumber, secondNumber);
+//         case "-": return sub(firstNumber, secondNumber);
+//         case "*": return multiply(firstNumber, secondNumber);
+//         case "/": return div(firstNumber, secondNumber);
+//         default: throw new Error("wrong input");
+//     }
+// }
+
+// alert(`The result is: ${calculate(firstNumber,secondNumber,operator)}`);
 
 // if(operator == "+") {
 //     result = firstNumber + secondNumber;
