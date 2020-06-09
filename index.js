@@ -1,8 +1,20 @@
+import {add , sub, multiply, div} from "./calculation.js";
+
 const firstNumber = Number(prompt("please enter your first number"));
 const secondNumber = Number(prompt("please enter your second number"));
-// const operator = prompt("please select an operation", ["+ ,- ,* , /"]);
+const operator = prompt("please select an operation", ["+ ,- ,* , /"]);
 
-// let result;
+function calculate(firstNumber, secondNumber, operator){
+    switch (operator) {
+        case "+": return add(firstNumber, secondNumber);
+        case "-": return sub(firstNumber, secondNumber);
+        case "*": return multiply(firstNumber, secondNumber);
+        case "/": return div(firstNumber, secondNumber);
+        default: throw new Error("wrong input");
+    }
+}
+
+alert(`The result is: ${calculate(firstNumber,secondNumber,operator)}`);
 
 // if(operator == "+") {
 //     result = firstNumber + secondNumber;
@@ -17,23 +29,7 @@ const secondNumber = Number(prompt("please enter your second number"));
 // }
 //
 // alert("the result is " + result);
-let result;
-function add(){
-    result = firstNumber + secondNumber;
-    alert(`the result is : ${result}`);
-}
-function sub(){
-    result = firstNumber - secondNumber;
-    alert(`the result is : ${result}`);
-}
-function multiply(){
-    result = firstNumber * secondNumber;
-    alert(`the result is : ${result}`);
-}
-function div(){
-    result = firstNumber / secondNumber;
-    alert(`the result is : ${result}`);
-}
+
 
 // function calculate(firstNumber, secondNumber, operator) {
 //
